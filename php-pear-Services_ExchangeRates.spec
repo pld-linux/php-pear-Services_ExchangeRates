@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Services
-%define         _subclass       ExchangeRates
+%define		_class		Services
+%define		_subclass	ExchangeRates
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Performs currency conversion
-Summary(pl):	%{_pearname} - Konwersja miêdzy walutami
+Summary:	%{_pearname} - performs currency conversion
+Summary(pl):	%{_pearname} - konwersja miêdzy walutami
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	1
