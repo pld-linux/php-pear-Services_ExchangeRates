@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          Services
 %define         _subclass       ExchangeRates
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Performs currency conversion
 Summary(pl):	%{_pearname} - Konwersja miêdzy walutami
 Name:		php-pear-%{_pearname}
-Version:	0.4.1
+Version:	0.5.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	5c5de2af32bc09938418cf16872c0919
+# Source0-md5:	0719b90dd9b881c4f99fd5f37b14604d
 URL:		http://pear.php.net/package/Services_ExchangeRates/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -53,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/docs
+%doc %{_pearname}-%{version}/example.php
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
