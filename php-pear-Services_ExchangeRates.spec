@@ -23,13 +23,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Extendable to work with any source that provides exchange rate data,
 this class downloads exchange rates and the name of each currency (US
 Dollar, Euro, Maltese Lira, etc.) and converts between any two of the
-available currencies (the actual number of currencies supported depends
-on the exchange rate feed used).  
+available currencies (the actual number of currencies supported
+depends on the exchange rate feed used).  
 
 This class has in PEAR status: %{_status}.
 
 %description -l pl
-...
+Ta klasa, rozszerzalna tak, ¿eby dzia³a³a z dowolnymi ¼ród³ami danych
+o wspó³czynnikach wymiany, pobiera wspó³czynniki i nazwy ka¿dej z
+walut (dolara amerykañskiego, euro, liry maltañskiej itp.) i
+konwertuje pomiêdzy dwiema dowolnymi z dostêpnych walut (w³a¶ciwa
+liczba obs³ugiwanych walut zale¿y od u¿ywanych ¼róde³ wspó³czynników
+wymiany).
 
 Ta klasa ma w PEAR status: %{_status}.
 
