@@ -26,7 +26,7 @@ Dollar, Euro, Maltese Lira, etc.) and converts between any two of the
 available currencies (the actual number of currencies supported
 depends on the exchange rate feed used).
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Ta klasa, rozszerzalna tak, ¿eby dzia³a³a z dowolnymi ¼ród³ami danych
