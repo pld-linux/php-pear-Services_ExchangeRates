@@ -24,7 +24,7 @@ Extendable to work with any source that provides exchange rate data,
 this class downloads exchange rates and the name of each currency (US
 Dollar, Euro, Maltese Lira, etc.) and converts between any two of the
 available currencies (the actual number of currencies supported
-depends on the exchange rate feed used).  
+depends on the exchange rate feed used).
 
 This class has in PEAR status: %{_status}.
 
