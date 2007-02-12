@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - performs currency conversion
-Summary(pl):	%{_pearname} - konwersja miêdzy walutami
+Summary(pl.UTF-8):   %{_pearname} - konwersja miÄ™dzy walutami
 Name:		php-pear-%{_pearname}
 Version:	0.5.3
 Release:	1
@@ -33,12 +33,12 @@ depends on the exchange rate feed used).
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ta klasa, rozszerzalna tak, ¿eby dzia³a³a z dowolnymi ¼ród³ami danych
-o wspó³czynnikach wymiany, pobiera wspó³czynniki i nazwy ka¿dej z
-walut (dolara amerykañskiego, euro, liry maltañskiej itp.) i
-konwertuje pomiêdzy dwiema dowolnymi z dostêpnych walut (w³a¶ciwa
-liczba obs³ugiwanych walut zale¿y od u¿ywanych ¼róde³ wspó³czynników
+%description -l pl.UTF-8
+Ta klasa, rozszerzalna tak, Å¼eby dziaÅ‚aÅ‚a z dowolnymi ÅºrÃ³dÅ‚ami danych
+o wspÃ³Å‚czynnikach wymiany, pobiera wspÃ³Å‚czynniki i nazwy kaÅ¼dej z
+walut (dolara amerykaÅ„skiego, euro, liry maltaÅ„skiej itp.) i
+konwertuje pomiÄ™dzy dwiema dowolnymi z dostÄ™pnych walut (wÅ‚aÅ›ciwa
+liczba obsÅ‚ugiwanych walut zaleÅ¼y od uÅ¼ywanych ÅºrÃ³deÅ‚ wspÃ³Å‚czynnikÃ³w
 wymiany).
 
 Ta klasa ma w PEAR status: %{_status}.
