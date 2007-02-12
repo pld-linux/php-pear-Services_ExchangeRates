@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - performs currency conversion
-Summary(pl.UTF-8):   %{_pearname} - konwersja między walutami
+Summary(pl.UTF-8):	%{_pearname} - konwersja między walutami
 Name:		php-pear-%{_pearname}
 Version:	0.5.3
 Release:	1
