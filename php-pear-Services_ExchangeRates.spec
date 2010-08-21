@@ -3,24 +3,23 @@
 %define		_subclass	ExchangeRates
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - performs currency conversion
 Summary(pl.UTF-8):	%{_pearname} - konwersja między walutami
 Name:		php-pear-%{_pearname}
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	e49c2a0c53ce32220913d66ab505faaa
 URL:		http://pear.php.net/package/Services_ExchangeRates/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite
 Requires:	php-pear-HTTP_Request
-Requires:	php-pear-XML_Tree
+Requires:	php-pear-XML_Tree >= 2.0.0-0.RC2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,9 +46,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
