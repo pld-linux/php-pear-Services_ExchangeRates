@@ -7,7 +7,7 @@ Summary:	%{_pearname} - performs currency conversion
 Summary(pl.UTF-8):	%{_pearname} - konwersja między walutami
 Name:		php-pear-%{_pearname}
 Version:	0.6.0
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
