@@ -1,21 +1,19 @@
+%define		status		beta
+%define		pearname	Services_ExchangeRates
 %include	/usr/lib/rpm/macros.php
-%define		_class		Services
-%define		_subclass	ExchangeRates
-%define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_pearname} - performs currency conversion
-Summary(pl.UTF-8):	%{_pearname} - konwersja między walutami
-Name:		php-pear-%{_pearname}
-Version:	0.6.0
-Release:	3
+Summary:	%{pearname} - performs currency conversion
+Summary(pl.UTF-8):	%{pearname} - konwersja między walutami
+Name:		php-pear-%{pearname}
+Version:	0.7.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	e49c2a0c53ce32220913d66ab505faaa
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	60e98e437110339efa1f44108e957d4f
 URL:		http://pear.php.net/package/Services_ExchangeRates/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite
 Requires:	php-pear-HTTP_Request
@@ -31,7 +29,7 @@ Dollar, Euro, Maltese Lira, etc.) and converts between any two of the
 available currencies (the actual number of currencies supported
 depends on the exchange rate feed used).
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Ta klasa, rozszerzalna tak, żeby działała z dowolnymi źródłami danych
@@ -41,17 +39,24 @@ konwertuje pomiędzy dwiema dowolnymi z dostępnych walut (właściwa
 liczba obsługiwanych walut zależy od używanych źródeł współczynników
 wymiany).
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
+
+install -d examples
+mv docs/%{pearname}/*.php examples
+
+# wtf
+rm .%{php_pear_dir}/data/Services_ExchangeRates/Services_ExchangeRates-0.7.0.tgz
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
-mv -f $RPM_BUILD_ROOT%{php_pear_dir}/Services/{Services/,}ExchangeRates
-mv -f $RPM_BUILD_ROOT%{php_pear_dir}/Services/{Services/,}ExchangeRates.php
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,7 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/Services/*.php
+%{php_pear_dir}/Services/ExchangeRates
+%{php_pear_dir}/data/Services_ExchangeRates
+%{_examplesdir}/%{name}-%{version}
