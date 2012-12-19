@@ -4,19 +4,20 @@
 Summary:	%{pearname} - performs currency conversion
 Summary(pl.UTF-8):	%{pearname} - konwersja między walutami
 Name:		php-pear-%{pearname}
-Version:	0.7.0
+Version:	0.8.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	60e98e437110339efa1f44108e957d4f
+# Source0-md5:	4b19b31222496c465fc3bdedc414bfbd
 URL:		http://pear.php.net/package/Services_ExchangeRates/
-BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
+BuildRequires:	php-pear-PEAR >= 1:1.9.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-Cache_Lite
-Requires:	php-pear-HTTP_Request
+Requires:	php-pear-HTTP_Request2
+Requires:	php-pear-XML_Serializer >= 0.20.0
 Requires:	php-pear-XML_Tree >= 2.0.0-0.RC2
 Obsoletes:	php-pear-Services_ExchangeRates-tests
 BuildArch:	noarch
@@ -46,9 +47,6 @@ Ta klasa ma w PEAR status: %{status}.
 
 install -d examples
 mv docs/%{pearname}/*.php examples
-
-# wtf
-rm .%{php_pear_dir}/data/Services_ExchangeRates/Services_ExchangeRates-0.7.0.tgz
 
 %install
 rm -rf $RPM_BUILD_ROOT
