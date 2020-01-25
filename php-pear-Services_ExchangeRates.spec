@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	Services_ExchangeRates
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - performs currency conversion
 Summary(pl.UTF-8):	%{pearname} - konwersja między walutami
 Name:		php-pear-%{pearname}
